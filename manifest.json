@@ -1,0 +1,39 @@
+{
+  "manifest_version": 2,
+  "name": "Advisory Scheduler",
+  "description": "Schedule Advisory sessions with your teacher",
+  "version": "0.0.1",
+  "icons": {
+    "64": "icons/icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://hmbhs.schoolloop.com/portal/student_home"
+      ],
+      "js": [
+        "node_modules/webextension-polyfill/dist/browser-polyfill.js",
+        "content_script.js"
+      ]
+    }
+  ],
+  "browser_action": {
+    "default_icon": {
+      "64": "icons/icon.png"
+    },
+    "default_popup": "browserAction/index.html",
+    "default_title": "Advisory Scheduler"
+  },
+  "page_action": {
+    "default_icon": {
+      "64": "icons/icon.png"
+    },
+    "default_popup": "pageAction/index.html",
+    "default_title": "Advisory Scheduler"
+  },
+  "externally_connectable": {
+    "matches": [
+      "*://hmbhs.schoolloop.com/*"
+    ]
+  }
+}
