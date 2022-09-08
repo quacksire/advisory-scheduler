@@ -17,23 +17,10 @@
       ]
     }
   ],
-  "browser_action": {
-    "default_icon": {
-      "64": "icons/icon.png"
-    },
-    "default_popup": "browserAction/index.html",
-    "default_title": "Advisory Scheduler"
-  },
-  "page_action": {
-    "default_icon": {
-      "64": "icons/icon.png"
-    },
-    "default_popup": "pageAction/index.html",
-    "default_title": "Advisory Scheduler"
-  },
   "externally_connectable": {
     "matches": [
       "*://hmbhs.schoolloop.com/*"
     ]
-  }
+  },
+  "web_accessible_resources": ["main.html"]
 }
